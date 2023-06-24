@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+
+
 def check_cut_placement(dimensions_of_the_material, dimensions_of_the_cuts):
     sorted_cuts = sorted(dimensions_of_the_cuts.items(), key=lambda x: x[1][0] * x[1][1], reverse=True)
     material_width, material_height = dimensions_of_the_material
@@ -28,6 +31,21 @@ def check_cut_placement(dimensions_of_the_material, dimensions_of_the_cuts):
         for coordinate in coordinates:
             output += f"        {coordinate}\n"
 
+    # Visualize the cut placements
+    fig, ax = plt.subplots()
+    ax.set_xlim(0, material_width)
+    ax.set_ylim(0, material_height)
+    ax.set_aspect('equal')
+
+    for cut_name, coordinates in cut_placements.items():
+        xs = [coord[0] for coord in coordinates]
+        ys = [coord[1] for coord in coordinates]
+        ax.fill(xs, ys, alpha=0.5, label=cut_name)
+        ax.text(xs[0] + 5, ys[0] + 5, cut_name)
+
+    plt.legend()
+    plt.show()
+
     return output
 
 
@@ -36,7 +54,7 @@ dimensions_of_the_material = [105, 68]
 dimensions_of_the_cuts = {
     "A": [52.5, 41],
     "B": [41, 17],
-    "C": [105, 7],
+    "C": [53, 7],
     "D": [52.5, 41],
     "E": [41, 17]
 }
