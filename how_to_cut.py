@@ -1,4 +1,6 @@
+import json
 import matplotlib.pyplot as plt
+import time
 
 
 def check_cut_placement(dimensions_of_the_material, dimensions_of_the_cuts):
@@ -41,23 +43,25 @@ def check_cut_placement(dimensions_of_the_material, dimensions_of_the_cuts):
         xs = [coord[0] for coord in coordinates]
         ys = [coord[1] for coord in coordinates]
         ax.fill(xs, ys, alpha=0.5, label=cut_name)
-        ax.text(xs[0] + 5, ys[0] + 5, cut_name)
+        ax.text((xs[0] + xs[2]) / 2, (ys[0] + ys[2]) / 2, cut_name, ha='center', va='center')
 
     plt.legend()
-    plt.show()
+
+    # Save the graphic with a timestamp as the file name
+    timestamp = time.strftime("%Y%m%d%H%M%S")
+    file_name = f"./cuts/cut_placement_{timestamp}.png"
+    plt.savefig(file_name)
+    plt.close()
 
     return output
 
 
-# Example usage
-dimensions_of_the_material = [105, 68]
-dimensions_of_the_cuts = {
-    "A": [52.5, 41],
-    "B": [41, 17],
-    "C": [53, 7],
-    "D": [52.5, 41],
-    "E": [41, 17]
-}
+# Read input from JSON file
+with open('input.json') as json_file:
+    input_data = json.load(json_file)
+
+dimensions_of_the_material = input_data['material_dimensions']
+dimensions_of_the_cuts = input_data['cut_dimensions']
 
 result = check_cut_placement(dimensions_of_the_material, dimensions_of_the_cuts)
 print(result)
