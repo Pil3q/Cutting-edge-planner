@@ -1,6 +1,7 @@
 import json
 import matplotlib.pyplot as plt
 import time
+import os
 
 
 def check_cut_placement(dimensions_of_the_material, dimensions_of_the_cuts):
@@ -55,6 +56,10 @@ def check_cut_placement(dimensions_of_the_material, dimensions_of_the_cuts):
 
     return output
 
+
+# Check if "cuts" directory exists and create it if it doesn't
+if not os.path.exists('cuts'):
+    os.makedirs('cuts')
 
 # Read input from JSON file
 with open('input.json') as json_file:
