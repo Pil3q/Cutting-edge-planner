@@ -47,9 +47,9 @@ def check_cut_placement(dimensions_of_the_material, dimensions_of_the_cuts):
 
     plt.legend()
 
-    # Save the graphic with a timestamp as the file name
+    # Save the graphic with the project name and timestamp as the file name
     timestamp = time.strftime("%Y%m%d%H%M%S")
-    file_name = f"./cuts/cut_placement_{timestamp}.png"
+    file_name = f"./cuts/{input_data['project_name']}_{timestamp}.png"
     plt.savefig(file_name)
     plt.close()
 
