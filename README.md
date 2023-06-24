@@ -1,27 +1,28 @@
-# Cutting edge planner
+# Cutting-edge planner
 ## Problem 
-Passion for sewing leave you with a lot of offcuts which could be turned into something nice. Drawing and planning the cuts it is not as much fun as making new clothes. This app will help you check if your project fits the material and will suggest how to place the cuts. 
+A passion for sewing inevitably leads to a stash of offcuts that could be repurposed for a new little project. Drawing and planning the pattern pieces is not as much fun as sewing new items. This app will help you check if the pieces required for your project fit in the fabric leftovers and will suggest how to optimize the placement for minimal waste sewing. All you need to know is the size of the fabric and of each piece.
 
 ## Assumptions
-1. Only rectangles are currently supported 
-2. No margin is added to the dimenssions (If you need one add it to the initial dimensions - might add an ofset option later)
+1. Only rectangular and squared pieces are currently supported 
+2. Remember to include the seam allowances in the measurements of each pattern piece (We might add an offset option later)
+3. Patter pieces won't be overlapped
 
 ## What it does
-Program will return the coordinates of each cut as text like below
+The program will return the coordinates of each pattern piece as text as shown below
 
 <p align="center">
   <img src="./images/coordinates.png" />
 </p>
 
-and will save a graphic with the cut placement.
+and will save a graphic with a cut placement suggestion.
 
 <p align="center">
   <img src="./images/result.png" />
 </p>
 
 ## How do I use it
-Pre reqs - Python (tested on 3.9)
-Install requerements with
+Prereqs - Python (tested on 3.9)
+Install requirements with
 ```bash
 pip install -r requirements.txt
 ```
