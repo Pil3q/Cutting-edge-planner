@@ -1,20 +1,22 @@
 # Cutting-edge planner
 ## Problem 
-A passion for sewing inevitably leads to a stash of offcuts that could be repurposed for a new little project. Drawing and planning the pattern pieces is not as much fun as sewing new items. This app will help you check if the pieces required for your project fit in the fabric leftovers and will suggest how to optimize the placement for minimal waste sewing. All you need to know is the size of the fabric and of each piece.
+A passion for sewing inevitably leads to a stash of offcuts that could be repurposed for new projects. Measuring, drawing and placing the pattern pieces it's often a tedious and time-consuming task that requires precision and good planning. It's definitely not as much fun as sewing! This app will help you check if the required pattern pieces for your project fit in the fabric leftovers and will suggest how to optimize the placement for minimal waste sewing. All you need to know is the measurements of the fabric and of each piece.
 
 ## Assumptions
-1. Only rectangular and squared pieces are currently supported 
-2. Remember to include the seam allowances in the measurements of each pattern piece (We might add an offset option later)
-3. Patter pieces won't be overlapped
-
+1. Only rectangular and squared pieces are currently supported. All measurements are in centimetres.
+2. Patter pieces won't be overlapped
+3. Include the seam allowances in the measurements of each pattern piece (We might add an offset option later to automatically calculate seam allowances)
+4. Unfortunately, as for now the selvedge is not included in the parameters
+5. Pattern matching might be limited
+   
 ## What it does
-The program will return the coordinates of each pattern piece as text as shown below
+The program will return the coordinates of each pattern piece as text as shown below. All measurements are in centimetres.
 
 <p align="center">
   <img src="./images/coordinates.png" />
 </p>
 
-and will save a graphic with a cut placement suggestion.
+And it will display a graphic placement suggestion.
 
 <p align="center">
   <img src="./images/result.png" />
