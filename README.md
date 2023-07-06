@@ -4,7 +4,7 @@ A passion for sewing inevitably leads to a stash of offcuts that could be repurp
 
 ## Assumptions
 1. Only rectangular and squared pieces are currently supported. All measurements are in centimetres.
-2. Patter pieces won't be overlapped
+2. Pattern pieces won't be overlapped
 3. Include the seam allowances in the measurements of each pattern piece (We might add an offset option later to automatically calculate seam allowances)
 4. Unfortunately, as for now the selvedge is not included in the parameters
 5. Pattern matching might be limited
@@ -49,3 +49,14 @@ Run the program from the repo directory with
 ```bash
 python how_to_cut.py
 ```
+
+## Practical Example
+"Can you help me to figure out if I have enough of this fabric?" - This is the question that started it all!
+We have created this planner for a very hands-on problem: the wish of sewing the lining to a recently sewn beach bag. We initially started planning how to cut out the pieces on a simple piece of paper, but the need for something more efficient was clear.
+In this case, the lining pieces were reinforced with iron-on interfacing, so we weren't too concerned about following the grainline.
+After a couple of tries with the coding and an hour or so at the sewing machine, here it is - a refined, fully-lined beach bag!
+We even managed to repurpose the tiny scraps left for some internal pockets.
+
+[[add pictures]]
+
+We hope you enjoy this little planner we've put together and please share with us your results!
