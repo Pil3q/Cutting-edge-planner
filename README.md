@@ -64,6 +64,8 @@ In this case, the lining pieces were reinforced with iron-on interfacing, so we 
 After a couple of tries with the coding and an hour or so at the sewing machine, here it is - a refined, fully-lined beach bag!
 We even managed to repurpose the tiny scraps left for some internal pockets.
 
-[[pictures coming soon - we need to go on holidays first!]]
-
+<center>
+<b>Pictures coming soon - we need to go on holidays first! ⛱️</b>
+</center>
+<br>
 We hope you enjoy this little planner we've put together and please share with us your results!
